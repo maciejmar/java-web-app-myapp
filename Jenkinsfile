@@ -12,7 +12,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t darinpope/java-web-app:latest .'
+        sh 'docker build -t maciejmar/java-web-app-myappp:latest .'
       }
     }
     stage('Login') {
@@ -23,7 +23,7 @@ pipeline {
     stage('Push to Heroku registry') {
       steps {
         sh '''
-          docker tag darinpope/java-web-app:latest registry.heroku.com/$APP_NAME/web
+          docker tag maciejmar/java-web-app-myapp:latest registry.heroku.com/$APP_NAME/web
           docker push registry.heroku.com/$APP_NAME/web
         '''
       }
