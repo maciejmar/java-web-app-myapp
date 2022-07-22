@@ -1,3 +1,1 @@
-# java-web-app
-
-modify README
+project for java-web-app automatization process
